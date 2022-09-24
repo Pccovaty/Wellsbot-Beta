@@ -4,7 +4,6 @@ const fs = require("fs");
 const moment = require('moment');
 const bot = new Discord.Client({disableEveryone: true});
 moment.locale('PL');
-const antispam = require("discordantispam"); //the main function for the anti spam
 bot.commands = new Discord.Collection();
 bot.mutes = [];
 
@@ -126,4 +125,4 @@ fs.writeFile("messages.json", JSON.stringify(messages), (err) => {
 
 });
 
-bot.login("NTAwMzYyMDA2NzUxMDg0NTk1.Dvgquw.gVJoNnJMjPcHDlgF_9o2vy0zHrU");
+bot.login(process.env.BOT_TOKEN);
